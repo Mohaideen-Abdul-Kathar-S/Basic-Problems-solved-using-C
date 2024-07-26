@@ -1,0 +1,85 @@
+//Write a program to find the multiplication of two matrices using pointers and DMA.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void read1(int *mat,int n,int m){
+printf("Enter %d elements : ",n*m);
+for(int i=0;i<n;i++){
+for(int j=0;j<m;j++){
+scanf("%d",mat+i*m+j);}}
+}
+
+void display(int *mat,int n,int m){
+for(int i=0;i<n;i++){
+for(int j=0;j<m;j++){
+printf("%d ",*(mat+i*m+j));}
+printf("\n");}
+}
+
+void multiplicationOfTwoMatrices(int *mat1,int *mat2,int n,int m,int k){
+int elem=0;
+printf("The Multiplication Matrix is\n");
+for(int i=0;i<n;i++){
+for(int j=0;j<k;j++){
+for(int l=0;l<m;l++){
+elem=elem+(*(mat1+i*m+l))*(*(mat2+l*k+j));
+}
+printf("%d ",elem);
+elem=0;
+}
+printf("\n");}
+}
+
+
+void main() {
+	int *a, *b, m, n, p, q;
+	printf("Enter the size of the first matrix : ");
+	scanf("%d%d", &m, &n);
+	a = (int *) calloc(m * n, sizeof(int));
+	read1(a, m, n);
+	printf("Enter the size of the second matrix : ");
+	scanf("%d%d", &p, &q);
+	b = (int *) calloc(p * q, sizeof(int));
+	read1(b, p, q);
+	printf("The first matrix is\n");
+	display(a, m, n);
+	printf("The second matrix is\n");
+	display(b, p, q);
+	if (n == p) {
+		multiplicationOfTwoMatrices(a, b, m, n, q);
+	} else {
+		printf("Multiplication is not possible\n");
+	}
+}
+
+/*
+
+Test case 1
+Enter·the·size·of·the·first·matrix·:·2 3	
+Enter·6·elements·:·1 2 3 4 5 6	
+Enter·the·size·of·the·second·matrix·:·2 2	
+Enter·4·elements·:·1 2 3 4	
+The·first·matrix·is⏎	
+1·2·3·⏎	
+4·5·6·⏎	
+The·second·matrix·is⏎	
+1·2·⏎	
+3·4·⏎	
+Multiplication·is·not·possible⏎	
+Test case 2
+Enter·the·size·of·the·first·matrix·:·2 2	
+Enter·4·elements·:·1 2 3 4	
+Enter·the·size·of·the·second·matrix·:·2 2	
+Enter·4·elements·:·3 4 5 6	
+The·first·matrix·is⏎	
+1·2·⏎	
+3·4·⏎	
+The·second·matrix·is⏎	
+3·4·⏎	
+5·6·⏎	
+The·Multiplication·Matrix·is⏎	
+13·16·⏎	
+29·36·⏎
+*/
