@@ -1,0 +1,50 @@
+/*
+Finding a Book in a Library
+Imagine a scenario where you are working in a library, and your task is to create a program to help library visitors locate a specific book. The library stores information about books in an array, and visitors can search for a book using its unique identification number.
+The program prompts users to enter the total number of books in the library and then input the identification numbers of each book. Once the library catalog is set up, visitors can enter the identification number of the book they are looking for. The program then searches through the catalog and outputs the position of the book in the array. If the book is not found, the program prints "-1" to indicate that the book is not in the library's collection.
+
+Input format:
+
+The first line contains an integer n, the total number of books in the library.
+The second line contains n space-separated integers, identification numbers of each book.
+The last line contains an integer k, the identification number of a book which the visitor looking for.
+
+
+Output format:
+
+Print the position of the book in the catalog if found, otherwise print -1.
+Hint: Array position starts from "1".
+*/
+
+
+
+#include<stdio.h>
+
+int main(){
+int n,m;
+scanf("%d",&n);
+int a[n];
+for(int i=0;i<n;i++){
+scanf("%d",&a[i]);}
+scanf("%d",&m);
+for(int i=0;i<n;i++){
+if(a[i]==m){
+printf("%d",i+1);
+return 1;}
+}
+printf("-1");
+return 0;
+}
+
+/*
+Test case 1
+7	
+11 15 65 95 84 29 58	
+11	
+1	
+Test case 2
+8	
+25 69 35 47 14 59 73 91	
+100	
+-1
+*/
