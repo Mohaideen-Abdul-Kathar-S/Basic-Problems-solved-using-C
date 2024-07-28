@@ -1,0 +1,38 @@
+// String Transformation
+
+#include <stdio.h>
+void modifyString(char *str) {
+int i=0;
+char *ptr1=str,*ptr2=str;
+while(*ptr1){
+if('a'<=*ptr1 && 'z'>=*ptr1){
+*ptr2=*ptr1-32;
+ptr2++;
+}else if('A'<=*ptr1 && 'Z'>=*ptr1){
+*ptr2=*ptr1;
+ptr2++;
+}
+ptr1++;
+}
+*ptr2='\0';
+}
+int main() {
+    char str[100];
+    scanf("%s", str);
+    modifyString(str);
+    printf("%s\n", str);
+    return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+CodeTantra	
+CODETANTRA⏎	
+Test case 2
+Mike123Rocks!	
+MIKEROCKS⏎
+
+*/
