@@ -1,0 +1,34 @@
+// Length of the string using Pointer
+
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    printf("String: ");
+    scanf("%s",str);
+    char *ptr =str;
+int i=0;
+while(*ptr!='\0'){
+i++;
+ptr++;
+}
+printf("Length: %d\n",i);
+    return 0;
+}
+
+/*
+
+
+Sample Test Cases
+
+Test case 1
+
+String:·CodeTantra	
+Length:·10⏎	
+
+Test case 2
+
+String:·!@#$%^&*()_+	
+Length:·12⏎
+
+*/
