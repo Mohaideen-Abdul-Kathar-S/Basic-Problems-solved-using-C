@@ -1,0 +1,49 @@
+//Concatenation of two strings
+
+#include <stdio.h>
+
+int main() {
+    char piece1[100];
+    char piece2[100];
+    printf("piece1: ") && scanf("%s",piece1);
+	printf("piece2: ") && scanf("%s",piece2);
+    // Declare character pointers and point them to the beginning of the strings
+    char *ptr1 = piece1;
+    char *ptr2 = piece2;
+	while(*ptr1!='\0'){
+		ptr1++;}
+
+    // Move the pointer1 to the end of the first string
+	while(*ptr2!='\0'){
+		*ptr1=*ptr2;
+		ptr2++;
+ptr1++;
+
+	}
+	*ptr1='\0';
+
+    // Concatenate the second string to the first
+
+
+    // Add null terminator to the concatenated string
+
+
+    printf("Concatenated string: %s\n", piece1);
+
+    return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+piece1:·Code	
+piece2:·Tantra	
+Concatenated·string:·CodeTantra⏎	
+Test case 2
+piece1:·-123456789	
+piece2:·!@#$%^&*	
+Concatenated·string:·-123456789!@#$%^&*⏎
+
+*/
