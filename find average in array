@@ -1,0 +1,49 @@
+//Write a C program that uses dynamic memory allocation functions to add n elements and display their average.
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int n;
+    int *arr;
+    double sum = 0;
+    double average;
+    // Input the number of elements from the user
+    printf("n: ") && scanf("%d",&n);
+
+    arr=(int *)malloc(n*sizeof(int));
+   
+
+	
+	// Input the elements from the user
+    printf("Enter Elements: ");
+    for(int i=0;i<n;i++){
+    scanf("%d",&arr[i]);
+}
+    // write the code for array input
+    for(int i=0;i<n;i++){
+sum+=arr[i];
+}
+    printf("Average: %.2f\n",sum/n);
+    
+
+   free(arr);
+    // Free the dynamically allocated memory
+
+    return 0;
+}
+/*
+
+
+Sample Test Cases
+Test case 1
+n:·5	
+Enter·Elements:·31 32 33 35 36	
+Average:·33.40	
+Test case 2
+n:·3	
+Enter·Elements:·65 69 87	
+Average:·73.67
+
+*/
