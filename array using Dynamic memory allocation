@@ -1,0 +1,48 @@
+//Write a C program to illustrate the dynamic memory allocation.
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int *dynamicArray;
+    int size;
+	// Get the size of the array from the user
+	printf("Enter the size of the dynamic array: ");
+	scanf("%d",&size);
+// Dynamically allocate memory for the array
+
+	dynamicArray=(int *)malloc(size*sizeof(int));
+	
+
+
+	
+	printf("Enter %d integers for the dynamic array:\n", size);
+	
+	for(int i=0;i<size;i++){
+scanf("%d",&dynamicArray[i]);
+}
+	
+	// Display the values in the dynamically allocated array
+	printf("Values in the dynamic array:\n");
+for(int i=0;i<size;i++){
+printf("%d ",dynamicArray[i]);}
+printf("\n");
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·the·size·of·the·dynamic·array:·3	
+Enter·3·integers·for·the·dynamic·array:⏎	
+5 9 7	
+Values·in·the·dynamic·array:⏎	
+5·9·7·⏎	
+Test case 2
+Enter·the·size·of·the·dynamic·array:·5	
+Enter·5·integers·for·the·dynamic·array:⏎	
+8 6 4 3 7	
+Values·in·the·dynamic·array:⏎	
+8·6·4·3·7·⏎
+
+*/
