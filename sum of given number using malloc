@@ -1,0 +1,47 @@
+//Write a C program that allows the user to input the number of subjects and their marks dynamically. After entering the data, display the sum of the marks.
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    // write your code here
+int numSubjects,sub=0;
+    printf("Subjects: ") && scanf("%d",&numSubjects);
+if(numSubjects<1){
+printf("Invalid subjects\n");
+return 0;}
+
+    int *marks = (int *)malloc(numSubjects * sizeof(int));
+
+    // write your code here
+printf("Marks: ");
+
+    for(int i=0;i<numSubjects;i++){
+
+
+scanf("%d",&marks[i]);
+
+
+sub+=marks[i];
+
+}
+    printf("Sum: %d\n",sub);
+
+    free(marks);
+    return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Subjects:·5	
+Marks:·92 91 94 90 90	
+Sum:·457⏎	
+Test case 2
+Subjects:·-2	
+Invalid·subjects⏎
+
+*/
