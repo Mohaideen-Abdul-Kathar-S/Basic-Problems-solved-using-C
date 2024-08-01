@@ -1,0 +1,51 @@
+//Number of primes and composites
+
+#include<stdio.h>
+#include<stdlib.h>
+int primecheck(int ptr,int off){
+if(off==1){
+return 1;
+}
+if(ptr<0){
+return 0;
+}
+if(ptr==0 || ptr==1){
+return 1; 
+}
+if(ptr%off==0)
+return 0;
+return primecheck(ptr,off-1);
+}
+void main(){
+int n,*arr,prime=0,comp=0;
+scanf("%d",&n);
+arr=(int *)malloc(n*sizeof(int));
+for(int i=0;i<n;i++){
+scanf("%d",&arr[i]);
+}
+int ret=0;
+
+for(int i=0;i<n;i++){
+ret = primecheck(arr[i],arr[i] / 2);
+if(ret==1) prime++;
+else comp++;
+}
+
+printf("%d\n%d\n",prime,comp);
+}
+/*
+
+
+Sample Test Cases
+Test case 1
+5	
+1 2 3 4 5	
+3⏎	
+1⏎	
+Test case 2
+8	
+7 8 9 4 5 6 4 2	
+3⏎	
+5⏎
+
+*/
