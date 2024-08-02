@@ -1,0 +1,57 @@
+//Write a C program to find the largest element in every row of a matrix by passing it to a function using a pointer.
+
+#include <stdio.h>
+int findLargestInRow(const int* row, int columns) {
+int max=0;	
+for(int i=0;i<columns;i++){
+if(*(row+i)>=max) max=*(row+i);
+}
+return max;
+}
+void findLargestInMatrix(const int* matrix, int rows, int columns) {
+for(int i=0;i<rows;i++){
+int a=findLargestInRow(matrix+i*columns,columns);
+printf("Largest element in Row %d: %d\n",i+1,a);
+}
+}
+int main() {
+    int rows, columns;
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    printf("Enter the number of columns: ");
+    scanf("%d", &columns);
+    int matrix[rows][columns];
+    printf("Enter the elements of the matrix:\n");
+ for(int i=0;i<rows;i++){
+for(int j=0;j<columns;j++){
+scanf("%d",&matrix[i][j]);
+}
+ }
+findLargestInMatrix(*matrix,rows,columns);
+    return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·the·number·of·rows:·3	
+Enter·the·number·of·columns:·2	
+Enter·the·elements·of·the·matrix:⏎	
+10 56	
+36 78	
+6 9	
+Largest·element·in·Row·1:·56⏎	
+Largest·element·in·Row·2:·78⏎	
+Largest·element·in·Row·3:·9⏎	
+Test case 2
+Enter·the·number·of·rows:·2	
+Enter·the·number·of·columns:·2	
+Enter·the·elements·of·the·matrix:⏎	
+6 6	
+7 9	
+Largest·element·in·Row·1:·6⏎	
+Largest·element·in·Row·2:·9⏎
+
+*/
