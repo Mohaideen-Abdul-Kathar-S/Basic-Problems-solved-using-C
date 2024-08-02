@@ -1,0 +1,44 @@
+// Write a C program to implement a function pointer to a function that finds the length of a string.
+
+#include <stdio.h>
+typedef size_t (*strings) (char *);
+
+// Function pointer type for a string length function
+
+// Complete the function to find the length of a string
+size_t findStringLength( char * str ) {
+int lenth=0;
+while(*str!='\0'){
+lenth++;
+str++;
+}
+return lenth;
+
+}
+int main() {
+    // Declare a function pointer of type StringLengthFunction
+strings strs;
+    // Assign the function pointer to the findStringLength function
+strs = findStringLength;
+    // Get a string input from the user
+char a[50];
+    printf("Enter a string: ");
+scanf("%s",a);
+int len = strs(a);
+printf("Length of the string: %d\n",len);
+
+    // Use the function pointer to find the length of the user input
+    
+}
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·a·string:·Code	
+Length·of·the·string:·4⏎	
+Test case 2
+Enter·a·string:·CodeTantra	
+Length·of·the·string:·10⏎
+
+*/
