@@ -1,0 +1,46 @@
+//Write a program to find the transpose of a given matrix using pointers.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void read1(int *mat[],int n,int m){
+for(int i=0;i<n;i++){
+for(int j=0;j<m;j++){
+scanf("%d",&mat[i][j]);
+}}}
+
+void display(int *mat[],int n,int m){
+for(int i=0;i<n;i++){
+for(int j=0;j<m;j++){
+printf("%d ",mat[i][j]);
+}
+printf("\n");
+}
+}
+
+void transpose(int *mat1[],int *mat2[],int n,int m){
+for(int i=0;i<m;i++){
+for(int j=0;j<n;j++){
+mat2[i][j]=mat1[j][i];
+}
+}
+}
+void main() {
+	int i, j, m, n;
+	int *a[5], *b[5];
+	printf("Enter the order of matrix : ");
+	scanf("%d %d", &m, &n);
+	for (i = 0; i < m; i++) {
+		a[i] = (int *) malloc(n * sizeof(int));
+	}
+	printf("Enter %d elements : ", m * n);
+	read1(a, m, n);
+	printf("The given matrix is\n");
+	display(a, m, n);
+	for (i = 0; i < n; i++) {
+		b[i] = (int *) malloc(m * sizeof(int));
+	}
+	transpose(a, b, m, n);
+	printf("Transpose of the given matrix is\n");
+	display(b, n, m);
+}
