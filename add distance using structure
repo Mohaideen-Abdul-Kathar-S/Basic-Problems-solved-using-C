@@ -1,0 +1,41 @@
+//Write a C Program to Add Two Distances (in inch-feet) System Using Structures.
+
+#include <stdio.h>
+
+struct{
+float feet,inch;
+}my;
+void main(){
+float ft,in;
+printf("Enter 1st distance \nfeet: "); scanf("%f",&my.feet);
+ft=my.feet;
+
+printf("inch: ") && scanf("%f",&my.inch);
+in=my.inch;
+
+printf("Enter 2nd distance \nfeet: ");
+scanf("%f",&my.feet);
+ft+=my.feet;
+
+printf("inch: ") && scanf("%f",&my.inch);
+in+=my.inch;
+printf("Sum of distances = %.0f\'-%0.1f\"",ft,in);
+}
+
+
+/*
+
+
+
+Sample Test Cases
+Test case 1
+Enter·1st·distance·⏎	
+feet:·34	
+inch:·2.4	
+Enter·2nd·distance·⏎	
+feet:·23	
+inch:·8.6	
+Sum·of·distances·=·57'-11.0"
+
+
+*/
