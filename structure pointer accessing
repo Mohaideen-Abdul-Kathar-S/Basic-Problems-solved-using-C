@@ -1,0 +1,89 @@
+//Write a C program that demonstrates different ways to access the structure elements using pointers.
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+// Define a structure named 'Person' with name, age, salary as variables
+struct  yoyo {
+    char name[100];
+int age;
+float salary;
+    
+};
+
+int main() {
+    // Declare a structure variable of type 'Person'
+    struct yoyo person1;
+
+    // Input values for the structure members from the user
+    printf("Name: ");
+    scanf("%s", person1.name);
+    printf("Age: ");
+    scanf("%d", &person1.age);
+    printf("Salary: ");
+    scanf("%f", &person1.salary);
+
+    // Declare a pointer ptr to a structure of type 'Person' and assign the address of 'person1'
+	struct yoyo *ptr= &person1;
+
+    // Access structure elements using the pointer directly
+    printf("Accessing structure elements using the pointer directly:");
+    //Print Name,Age,Salary(up to 2 decimal points)
+    printf("\nName: %s\nAge: %d\nSalary: %.2f",ptr->name,ptr->age,ptr->salary);
+
+
+    
+
+    // Access structure elements using the pointer with the '->' operator
+    printf("\nAccessing structure elements using the pointer with the '->' operator:");
+    //Print Name,Age,Salary(up to 2 decimal points)
+    printf("\nName: %s\nAge: %d\nSalary: %.2f",ptr->name,ptr->age,ptr->salary);
+    
+
+    // Access structure elements using the pointer with the '(*ptr).' notation
+    printf("\nAccessing structure elements using the pointer with the '(*ptr)' notation:");
+    //Print Name,Age,Salary(up to 2 decimal points)
+      printf("\nName: %s\nAge: %d\nSalary: %.2f",(*ptr).name,(*ptr).age,(*ptr).salary);
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Name:·Jack	
+Age:·21	
+Salary:·50000	
+Accessing·structure·elements·using·the·pointer·directly:⏎	
+Name:·Jack⏎	
+Age:·21⏎	
+Salary:·50000.00⏎	
+Accessing·structure·elements·using·the·pointer·with·the·'->'·operator:⏎	
+Name:·Jack⏎	
+Age:·21⏎	
+Salary:·50000.00⏎	
+Accessing·structure·elements·using·the·pointer·with·the·'(*ptr)'·notation:⏎	
+Name:·Jack⏎	
+Age:·21⏎	
+Salary:·50000.00	
+Test case 2
+Name:·William	
+Age:·25	
+Salary:·45000	
+Accessing·structure·elements·using·the·pointer·directly:⏎	
+Name:·William⏎	
+Age:·25⏎	
+Salary:·45000.00⏎	
+Accessing·structure·elements·using·the·pointer·with·the·'->'·operator:⏎	
+Name:·William⏎	
+Age:·25⏎	
+Salary:·45000.00⏎	
+Accessing·structure·elements·using·the·pointer·with·the·'(*ptr)'·notation:⏎	
+Name:·William⏎	
+Age:·25⏎	
+Salary:·45000.00
+
+
+*/
