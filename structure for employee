@@ -1,0 +1,52 @@
+//Maintaining employee details by using pointers and structures
+
+#include <stdio.h>
+#include<stdlib.h>
+struct emp{
+int roll,pay,allo,ded;
+char name[20];
+};
+
+void main(){
+int n;
+printf("Enter the number of employees : "); scanf("%d",&n);
+struct emp *s=(struct emp *)calloc(n,sizeof(struct emp));
+for(int i=0;i<n;i++){
+    printf("Enter the employee number : ");
+    scanf("%d",&s[i].roll);
+    printf("Enter the name : ");
+    scanf("%s",s[i].name);
+printf("Enter basic pay, allowances & deductions : ");
+scanf("%d %d %d",&s[i].pay,&s[i].allo,&s[i].ded);
+}
+printf("Emp. No. Name \t Bpay \t Allow \t Ded \t Npay\n");
+for(int i=0;i<n;i++){
+printf("%d \t %s \t %d \t %d \t %d \t %d\n",s[i].roll,s[i].name,s[i].pay,s[i].allo,s[i].ded,s[i].pay+s[i].allo-s[i].ded);
+}
+
+}
+/*
+
+
+
+Sample Test Cases
+Test case 1
+Enter·the·number·of·employees·:·2	
+Enter·the·employee·number·:·101	
+Enter·the·name·:·Arun	
+Enter·basic·pay,·allowances·&·deductions·:·5000 1000 250	
+Enter·the·employee·number·:·102	
+Enter·the·name·:·Babu	
+Enter·basic·pay,·allowances·&·deductions·:·7000 1500 750	
+Emp.·No.·Name·→·Bpay·→·Allow·→·Ded·→·Npay⏎	
+101·→·Arun·→·5000·→·1000·→·250·→·5750⏎	
+102·→·Babu·→·7000·→·1500·→·750·→·7750⏎	
+Test case 2
+Enter·the·number·of·employees·:·1	
+Enter·the·employee·number·:·12345	
+Enter·the·name·:·Kumar	
+Enter·basic·pay,·allowances·&·deductions·:·25000 3000 1000	
+Emp.·No.·Name·→·Bpay·→·Allow·→·Ded·→·Npay⏎	
+12345·→·Kumar·→·25000·→·3000·→·1000·→·27000⏎
+
+*/
