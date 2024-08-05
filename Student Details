@@ -1,0 +1,109 @@
+/*Student Details
+You have been assigned the task of developing a student grading system for a prestigious college. Design a program using structures that store student details, 
+such as name, roll number, and marks in various subjects. Implement an array of structures to store multiple student records and calculate the overall percentage 
+for each student. Additionally, provides a functionality to generate a grade for each student based on their percentage and display it alongside their record.*/
+
+
+#include <stdio.h>
+#include <string.h>
+#include<stdlib.h>
+struct stud{
+char name[20];
+int roll;
+float mark[5],per;
+};
+
+void main(){
+int n;
+float sum=0;
+scanf("%d",&n);
+struct stud *s=(struct stud *)malloc(n * sizeof(struct stud));
+for(int i=0;i<n;i++){
+scanf("%s %d",s[i].name,&s[i].roll);
+for(int j=0;j<5;j++){
+scanf("%f",&s[i].mark[j]);
+sum+=s[i].mark[j];
+}
+s[i].per=sum/5;
+sum=0;
+}
+
+for(int i=0;i<n;i++){
+printf("Name: %s\n",s[i].name);
+printf("Roll number: %d\n",s[i].roll);
+printf("Percentage: %0.2f\n",s[i].per);
+if(s[i].per>90){
+printf("Grade: A\n");
+}else if(s[i].per>80){
+printf("Grade: B\n");
+}else if(s[i].per>70){
+printf("Grade: C\n");
+}else{
+printf("Not Grade\n");
+}
+}
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+1	
+Steven	
+45	
+78 89 88 90 75	
+Name:·Steven⏎	
+Roll·number:·45⏎	
+Percentage:·84.00⏎	
+Grade:·B⏎	
+Test case 2
+3	
+John	
+101	
+98 90 92 88 91	
+Alice	
+102	
+85 78 90 92 80	
+Bob	
+103	
+75 80 68 88 70	
+Name:·John⏎	
+Roll·number:·101⏎	
+Percentage:·91.80⏎	
+Grade:·A⏎	
+Name:·Alice⏎	
+Roll·number:·102⏎	
+Percentage:·85.00⏎	
+Grade:·B⏎	
+Name:·Bob⏎	
+Roll·number:·103⏎	
+Percentage:·76.20⏎	
+Grade:·C⏎	
+Test case 3
+2	
+Emma	
+201	
+94 86 89 92 88	
+Sophia	
+202	
+78 82 86 90 76	
+Name:·Emma⏎	
+Roll·number:·201⏎	
+Percentage:·89.80⏎	
+Grade:·B⏎	
+Name:·Sophia⏎	
+Roll·number:·202⏎	
+Percentage:·82.40⏎	
+Grade:·B⏎	
+Test case 4
+1	
+Liam	
+301	
+88 90 94 92 85	
+Name:·Liam⏎	
+Roll·number:·301⏎	
+Percentage:·89.80⏎	
+Grade:·B⏎
+
+*/
