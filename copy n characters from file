@@ -1,0 +1,60 @@
+/*
+Write a C program to Copy last n characters from one File to another File
+
+Write a program to copy last n characters from file-1 to file-2.
+open a new file "TestDataFile1.txt" in write mode
+write the content onto the file
+close the file
+open an existing file "TestDataFile1.txt" in read mode
+open a new file "TestDataFile2.txt" in write mode
+read the number of characters to copy
+set the cursor position by using fseek()
+copy the content from existing file to new file
+close the files
+open the copied file "TestDataFile2.txt" in read mode
+read the text from file and print on the screen
+close the file
+
+*/
+
+
+#include<stdio.h>
+void main(){
+FILE *fb;
+fb=fopen("T.txt","w");
+char ch;
+printf("Enter the text with @ at end : ");
+while((ch=getchar())!='@'){
+fputc(ch,fb);
+}
+fputc(ch,fb);
+fclose(fb);
+printf("Enter number of characters to copy : ");
+int n;
+scanf("%d",&n);
+fb=fopen("T.txt","r");
+fseek(fb,-n-1,2);
+printf("Copied text is : ");
+while((ch=fgetc(fb))!='@'){
+printf("%c",ch);
+}
+printf("\n");
+}
+/*
+
+Sample Test Cases
+Test case 1
+Enter·the·text·with·@·at·end·:·We should not give up	
+and we should not allow the problem to defeat us@	
+Enter·number·of·characters·to·copy·:·15	
+Copied·text·is·:·em·to·defeat·us⏎	
+Test case 2
+Enter·the·text·with·@·at·end·:·You have to dream	
+before	
+Your dreams can come true@	
+Enter·number·of·characters·to·copy·:·20	
+Copied·text·is·:·dreams·can·come·true⏎
+
+
+
+*/
