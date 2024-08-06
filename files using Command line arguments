@@ -1,0 +1,53 @@
+//Print the last 'n' characters of a file by reading the file using Command line arguments
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	// write your code here...
+	
+	FILE *fb=fopen(argv[1],"r");
+int n=atoi(argv[2]);
+char ch;
+
+if(fb==NULL){
+printf("Failed to open the file\n");
+return 0;}
+fseek(fb,-n,2);
+int i=0;
+
+while( i<n ){
+ch=fgetc(fb);
+
+printf("%c",ch);
+i++;
+
+}
+printf("\n");
+	
+	
+	return 0;
+}
+/*
+
+
+Sample Test Cases
+Test case 1
+Command line arguments: 
+input2.txt
+41
+·Attempting·to·reconnect·to·the·database⏎	
+Test case 2
+Command line arguments: 
+input1.txt
+10
+good·idea.	
+Test case 3
+Command line arguments: 
+textfle.txt
+20
+Failed·to·open·the·file⏎
+
+
+*/
