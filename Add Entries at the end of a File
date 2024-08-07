@@ -1,0 +1,51 @@
+//Write a program that can add the entries of multiple employees every day at the end of the file
+
+#include<stdio.h>
+void main(){
+	int n,i;
+	char in[10],out[10],buf[100],str[100]="yahya.txt";
+	printf("no of employees: ") && scanf("%d",&n);
+	FILE *fb;
+    fb=fopen(str,"w");
+	for(i=1;i<=n;i++){
+		printf("login: ") && scanf("%s",in);
+		printf("signoff: ") && scanf("%s",out);
+		fprintf(fb,"(%d)login: %s\nsingoff: %s\n",i,in,out);
+	}
+	fclose(fb);
+	printf("Employees timings:\n");
+	fb=fopen(str,"r");
+	while(fgets(buf,sizeof(buf),fb)!=NULL){
+		printf("%s",buf);
+	}
+} 
+
+/*
+
+
+Sample Test Cases
+Test case 1
+no·of·employees:·5	
+login:·6AM	
+signoff:·4PM	
+login:·8AM	
+signoff:·6PM	
+login:·10:15AM	
+signoff:·7PM	
+login:·11AM	
+signoff:·9PM	
+login:·9AM	
+signoff:·8PM	
+Employees·timings:⏎	
+(1)login:·6AM⏎	
+singoff:·4PM⏎	
+(2)login:·8AM⏎	
+singoff:·6PM⏎	
+(3)login:·10:15AM⏎	
+singoff:·7PM⏎	
+(4)login:·11AM⏎	
+singoff:·9PM⏎	
+(5)login:·9AM⏎	
+singoff:·8PM⏎
+
+*/
