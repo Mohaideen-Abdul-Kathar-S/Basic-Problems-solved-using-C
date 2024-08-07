@@ -1,0 +1,49 @@
+//Write a program to count number of characters, words and lines of given text file.
+
+#include<stdio.h>
+void main(){
+int nl=0,ch=0,wo=0;
+char cha;
+FILE *fp;
+fp=fopen("TEXT.txt","w");
+printf("Enter the text with @ at end : ");
+while((cha=getchar())!='@'){
+fputc(cha,fp);
+}
+fputc(cha,fp);
+fclose(fp);
+fp=fopen("TEXT.txt","r");
+while((cha=getc(fp))!='@'){
+if(cha=='\n'){
+nl++;
+wo++;}
+else if(cha==' '){
+wo++;
+}else{
+ch++;
+}
+}
+
+printf("Total characters : %d\nTotal words : %d\nTotal lines : %d\n",ch,++wo,++nl);
+fclose(fp);
+
+}
+/*
+
+Sample Test Cases
+Test case 1
+Enter·the·text·with·@·at·end·:·Arise! Awake!	
+and stop not until	
+the goal is reached@	
+Total·characters·:·43⏎	
+Total·words·:·10⏎	
+Total·lines·:·3⏎	
+Test case 2
+Enter·the·text·with·@·at·end·:·Believe in your self	
+and the world will be	
+at your feet@	
+Total·characters·:·44⏎	
+Total·words·:·12⏎	
+Total·lines·:·3⏎
+
+*/
