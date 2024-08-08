@@ -1,0 +1,41 @@
+
+
+
+#include <stdio.h>
+// macros for finding the maximum and minimum of two numbers
+#define MAX(x, y) ((x) > (y) ? (x) : (y))
+#define MIN(x, y) ((x) < (y) ? (x) : (y))
+#define SQR(x) (x*x)
+
+
+
+int main() {
+    double num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &num1, &num2);
+double max=MAX(num1,num2);
+double min=MIN(num1,num2);
+printf("Maximum: %.2f\nMinimum: %.2f\n",max,min);
+printf("Square of %.2f: %.2f\nSquare of %.2f: %.2f\n",min,SQR(min),max,SQR(max));
+
+
+}
+
+
+/*
+
+Sample Test Cases
+Test case 1
+Enter·two·numbers:·5 6	
+Maximum:·6.00⏎	
+Minimum:·5.00⏎	
+Square·of·5.00:·25.00⏎	
+Square·of·6.00:·36.00⏎	
+Test case 2
+Enter·two·numbers:·7 9	
+Maximum:·9.00⏎	
+Minimum:·7.00⏎	
+Square·of·7.00:·49.00⏎	
+Square·of·9.00:·81.00⏎
+
+*/
