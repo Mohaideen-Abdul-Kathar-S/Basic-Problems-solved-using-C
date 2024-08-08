@@ -1,0 +1,49 @@
+// Arithmetic operations
+
+
+#include <stdio.h>
+// macros for basic arithmetic operations
+#define ADD(x, y) ((x) + (y))
+#define SUBTRACT(x, y) ((x) - (y))
+#define MULTIPLY(x, y) ((x) * (y))
+int main() {
+    double num1, num2;
+    char operation;
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &num1, &num2);
+    printf("Choose an operation (+, -, *): ");
+    scanf(" %c", &operation);
+
+    
+
+       
+        if(operation=='+'){ printf("Sum: %0.2lf\n",ADD(num1,num2));}
+else if(operation=='-'){ printf("Difference: %0.2lf\n",SUBTRACT(num1,num2));} 
+else if(operation=='*'){
+printf("Product: %0.2lf\n",MULTIPLY(num1,num2));
+}
+else{
+printf("Invalid operation.\n");
+return 0;} 
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·two·numbers:·5 6	
+Choose·an·operation·(+,·-,·*):·+	
+Sum:·11.00⏎	
+Test case 2
+Enter·two·numbers:·7 9	
+Choose·an·operation·(+,·-,·*):·*	
+Product:·63.00⏎	
+Test case 3
+Enter·two·numbers:·8 3	
+Choose·an·operation·(+,·-,·*):·-	
+Difference:·5.00⏎	
+Test case 4
+Enter·two·numbers:·7 5	
+Choose·an·operation·(+,·-,·*):·@	
+Invalid·operation.⏎
+
+*/
