@@ -1,0 +1,48 @@
+//Calculating square or cube of a number
+
+#include <stdio.h>
+// SQUARE and CUBE macros
+#define SQUARE(x) ((x) * (x))
+#define CUBE(x) ((x) * (x) * (x))
+int main() {
+    double num;
+    char choice;
+    printf("Enter a number: ");
+    scanf("%lf", &num);
+    printf("1. Square 2. Cube\n");
+    printf("Enter your choice (1/2): ");
+    scanf(" %c", &choice);
+   
+ 
+if(choice=='1'){ printf("Square of %0.2lf is: %0.2lf\n",num,SQUARE(num));}
+else if(choice=='2'){ printf("Cube of %0.2lf is: %0.2lf\n",num,CUBE(num));} 
+else{
+printf("Invalid choice.\n");
+return 0;}      
+
+
+ 
+
+	
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+Enter·a·number:·6	
+1.·Square·2.·Cube⏎	
+Enter·your·choice·(1/2):·a	
+Invalid·choice.⏎	
+Test case 2
+Enter·a·number:·6	
+1.·Square·2.·Cube⏎	
+Enter·your·choice·(1/2):·1	
+Square·of·6.00·is:·36.00⏎	
+Test case 3
+Enter·a·number:·6	
+1.·Square·2.·Cube⏎	
+Enter·your·choice·(1/2):·2	
+Cube·of·6.00·is:·216.00⏎
+
+*/
