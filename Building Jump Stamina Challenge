@@ -1,0 +1,63 @@
+// Hassan enjoys jumping from one building to the next, always choosing the next highest building. The amount of stamina required for a journey is the XOR of all the heights Hassan jumps until he comes to a halt. The goal is to find the maximum stamina required if he starts his journey from any building.
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_N 1000
+
+int main() {
+    int N;
+    scanf("%d", &N);
+    
+    int heights[MAX_N];
+    for (int i = 0; i < N; ++i) {
+        scanf("%d", &heights[i]);
+    }
+    
+    int max_stamina = 0;
+
+    // Iterate over each building as the starting point
+    for (int i = 0; i < N; ++i) {
+        int current_stamina = 0;
+        int last_height = heights[i];
+        
+        for (int j = i; j < N; ++j) {
+            if (heights[j] >= last_height) {
+                current_stamina ^= heights[j];
+                last_height = heights[j];
+            }
+        }
+        
+        if (current_stamina > max_stamina) {
+            max_stamina = current_stamina;
+        }
+    }
+    
+    printf("%d\n", max_stamina);
+    
+    return 0;
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+8	
+1 2 3 8 6 4 7 9	
+14	
+Test case 2
+5	
+1 2 3 8 6	
+11	
+Test case 3
+4	
+1 2 1 4	
+7
+
+
+*/
