@@ -1,0 +1,52 @@
+//Write a C program that demonstrates the use of logical operators (&&, ||, !) with dynamic input.
+
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	printf("Enter numbers: ");
+	scanf(" %d %d",&a,&b);
+	if(a>=0 && b>=0)
+	{
+		printf("Both are positive\n");
+	}
+	else
+	{
+		printf("Both are not positive\n");
+	}
+	if(a==5 || b==5)
+	{
+		printf("%d or %d = 5\n",a,b);
+	}
+	else
+	{
+		printf("%d,%d != 5\n",a,b);
+	}
+	if(a>10)
+	{
+		printf("%d > 10\n",a);
+	}
+	else
+	{
+		printf("%d <= 10\n",a);
+	}
+	
+
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·numbers:·15 6	
+Both·are·positive⏎	
+15,6·!=·5⏎	
+15·>·10⏎	
+Test case 2
+Enter·numbers:·5 10	
+Both·are·positive⏎	
+5·or·10·=·5⏎	
+5·<=·10⏎
+
+*/
