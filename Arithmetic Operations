@@ -1,0 +1,56 @@
+//Write a C program to perform arithmetic operations like +,-,*,/,% on two input variables.
+#include <stdio.h>
+void main()
+{
+	int a,b;
+	printf("num1: ");
+	scanf("%d",&a);
+	printf("num2: ");
+	scanf("%d",&b);
+	printf("Sum: %d\n",a+b);
+	printf("Difference: %d\n",a-b);
+	printf("Product: %d\n",a*b);
+	
+	if(b!=0)
+	{
+	printf("Division: %d\n",a/b);
+	}
+	else
+	{
+		printf("Infinity\n");
+    }
+    if(b!=0)
+    {
+	printf("Modulus: %d\n",a%b);
+    }
+    else
+    {
+    	printf("Modulo by zero is not allowed\n");
+    }
+	
+	
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+num1:·9	
+num2:·8	
+Sum:·17⏎	
+Difference:·1⏎	
+Product:·72⏎	
+Division:·1⏎	
+Modulus:·1⏎	
+Test case 2
+num1:·25	
+num2:·0	
+Sum:·25⏎	
+Difference:·25⏎	
+Product:·0⏎	
+Infinity⏎	
+Modulo·by·zero·is·not·allowed⏎
+
+*/
