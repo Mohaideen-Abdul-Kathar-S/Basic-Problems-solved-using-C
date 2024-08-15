@@ -1,0 +1,45 @@
+//Write a C program to display the greatest of three numbers using a conditional operator (ternary operator).
+
+#include<stdio.h>
+int main()
+{
+int a1,b1,c1;
+	printf("num1: ") && scanf("%d",&a1);
+	printf("num2: ") && scanf("%d",&b1);
+	printf("num3: ") && scanf("%d",&c1);
+	
+	if(b1<=a1 && c1<=a1)
+    {
+    	printf("Greatest number: %d\n",a1);
+    }
+    else if(a1<=b1 && c1<=b1)
+    {
+    	printf("Greatest number: %d\n",b1);
+    }
+    else if(a1<=c1 && b1<=c1)
+    {
+    	printf("Greatest number: %d\n",c1);
+    }
+    /*else
+    {
+        printf("values are sames: %d,%d,%d\n",a1,b1,c1);	
+    }*/
+
+return 0;
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+num1:·8	
+num2:·9	
+num3:·90	
+Greatest·number:·90⏎	
+Test case 2
+num1:·5	
+num2:·45	
+num3:·6	
+Greatest·number:·45⏎
+
+*/
