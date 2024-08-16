@@ -1,0 +1,32 @@
+/*
+Problem Description
+
+Simon owns a welding company and has purchased various types of metal for producing different products.
+
+
+
+To weld two metals together, he needs to know the temperature of each specific metal in degrees Fahrenheit. Unfortunately, the raw materials imported are provided with temperatures in degrees Celsius.
+
+
+
+Simon needs your help to convert these temperatures to degrees Fahrenheit. Can you assist him?
+
+*/
+
+#include<stdio.h>
+void main(){ float a;
+	scanf("%f",&a);
+	printf("%0.2f\n",a*9/5+32);
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+47.5	
+117.50	
+Test case 2
+39.6	
+103.28
+
+*/
