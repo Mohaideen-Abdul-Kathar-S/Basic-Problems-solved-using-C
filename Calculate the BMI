@@ -1,0 +1,34 @@
+/*
+Problem Description:
+
+Binita always dreamed of flying in the sky since her childhood. Her goal was to become a pilot. While applying for the pilot training program, she cleared the entrance exam but failed the physical test due to being overweight. Forgetting to take care of her health during the preparation, she decided not to give up. Binita joined a gym to pass the physical test the next time.
+
+
+
+Her gym trainer asked her to calculate her BMI to provide her with a proper diet plan. However, she had other tasks to attend to. Can you help this motivated girl?
+
+
+
+BMI = weight / (height × height)
+*/
+
+#include<stdio.h>
+void main(){ float h;
+	int w;
+	scanf("%d",&w) && scanf("%f",&h);
+	printf("%0.2f\n",w/(h*h));
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+47	
+1.53	
+20.08	
+Test case 2
+55	
+1.52	
+23.81
+
+*/
