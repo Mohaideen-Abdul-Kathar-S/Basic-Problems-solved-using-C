@@ -1,0 +1,39 @@
+/*
+
+Swetha has 
+N
+ fruits. Sweety asks her to give her a few fruits. Swetha, being very generous and kind-hearted, decides to give all the fruits to Sweety, but with one condition.
+
+
+
+She will give all the fruits to Sweety only if the integer 
+N
+ can be divided into three parts such that these three parts can form the sides of an equilateral triangle. Otherwise, she won't give any fruit to Sweety.
+
+
+
+Print YES if Swetha will give all fruits to Sweety; otherwise, print NO
+
+*/
+
+#include<stdio.h>
+void main(){ int a;
+	scanf("%d",&a);
+	if(a%3==0)
+		printf("YES");
+	else
+		printf("NO");
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+123	
+YES	
+Test case 2
+256	
+NO
+
+*/
