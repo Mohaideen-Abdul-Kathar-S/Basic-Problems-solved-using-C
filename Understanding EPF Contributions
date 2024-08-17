@@ -1,0 +1,38 @@
+
+
+/*
+
+Problem Description:
+
+Tina successfully completed her first month as a Navy Officer, and her much-awaited first month's salary got credited to her account. She also received her salary report in her mail.
+
+
+
+Upon reviewing the salary report, Tina noticed the absence of information about the Employee Provident Fund (EPF). Curious about the Employee and Employer Contributions for EPF, she seeks your assistance
+
+
+
+*/
+
+#include<stdio.h>
+void main(){
+	float a;
+	scanf("%f",&a);
+	printf("%0.2f\n",(a/100)*17.5);
+	printf("%0.2f\n",(a/100)*23.5);
+}
+/*
+
+
+
+Sample Test Cases
+Test case 1
+42785	
+7487.38⏎	
+10054.48	
+Test case 2
+3269	
+572.07⏎	
+768.21
+
+*/
