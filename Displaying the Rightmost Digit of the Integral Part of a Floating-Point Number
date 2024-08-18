@@ -1,0 +1,25 @@
+//Displaying the Rightmost Digit of the Integral Part of a Floating-Point Number
+
+
+#include<stdio.h>
+void main(){
+	float a;
+	int b;
+	scanf("%f",&a);
+	b=a;
+	for(int i=1;i==1;i++)
+		b=b%10;
+		printf("%d\n",b);
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+1985.674	
+5	
+Test case 2
+3489.781	
+9
+
+*/
