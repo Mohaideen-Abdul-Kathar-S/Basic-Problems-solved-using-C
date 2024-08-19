@@ -1,0 +1,22 @@
+//Calculating Total Salary from Basic Pay, HRA, and DA
+
+
+#include<stdio.h>
+void main(){ float a;
+	scanf("%f",&a);
+	printf("%0.2f\n",a+0.8*a+0.4*a);
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+25462	
+56016.40	
+Test case 2
+37135	
+81697.00
+
+*/
