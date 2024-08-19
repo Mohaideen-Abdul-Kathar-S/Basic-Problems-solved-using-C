@@ -1,0 +1,30 @@
+//Compute and display the total number of seconds represented by duration
+
+
+#include<stdio.h>
+void main(){
+	int a,b,c,d;
+	scanf("%d",&a) && scanf("%d",&b) && scanf("%d",&c) && scanf("%d",&d);
+	printf("%d seconds\n",d+c*60+b*60*60+a*24*60*60);
+}
+
+
+/*
+
+
+
+Sample Test Cases
+Test case 1
+5	
+3	
+2	
+30	
+442950·seconds	
+Test case 2
+3	
+3	
+2	
+30	
+270150·seconds
+
+*/
