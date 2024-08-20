@@ -1,0 +1,49 @@
+//Write a C program to perform temperature conversions from Centigrade to Fahrenheit and vice versa.
+
+
+#include<stdio.h>
+void main()
+{ int a; float b,c,d;
+	printf("Temperature Conversion:\n1.Celsius to Fahrenheit\n2.Fahrenheit to Celsius\n");
+	printf("choice: ") && scanf("%d",&a);
+	if(a==1)
+	{
+	printf("Enter Temperature in Celsius: ") && scanf("%f",&b);
+	printf("Fahrenheit Temperature: %.2f\n",d=(b*9/5)+32);
+	}
+	else if(a==2)
+	{
+	printf("Enter Temperature in Fahrenheit: ") && scanf("%f",&c);
+	printf("Celsius Temperature: %.2f\n",d=(c-32)*5/9);
+	}
+	else
+	 printf("Invalid choice\n");
+	
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Temperature·Conversion:⏎	
+1.Celsius·to·Fahrenheit⏎	
+2.Fahrenheit·to·Celsius⏎	
+choice:·1	
+Enter·Temperature·in·Celsius:·35.78	
+Fahrenheit·Temperature:·96.40⏎	
+Test case 2
+Temperature·Conversion:⏎	
+1.Celsius·to·Fahrenheit⏎	
+2.Fahrenheit·to·Celsius⏎	
+choice:·2	
+Enter·Temperature·in·Fahrenheit:·96.40	
+Celsius·Temperature:·35.78⏎	
+Test case 3
+Temperature·Conversion:⏎	
+1.Celsius·to·Fahrenheit⏎	
+2.Fahrenheit·to·Celsius⏎	
+choice:·3	
+Invalid·choice⏎
+
+*/
