@@ -1,0 +1,57 @@
+//Write a C program to scan all data type variables(int, float, char, double) as input and print them as output.
+
+
+#include<stdio.h>
+int main()
+{
+	int i;
+	float f;
+	char  c;
+	double d;
+	
+	printf("integer: ");
+	scanf("%d",&i);
+	
+	printf("floating-point number: ");
+	scanf("%f",&f);
+	
+	printf("character: ");
+	scanf(" %c",&c);
+	
+	printf("double: ");
+	scanf("%lf",&d);
+	
+	printf("You entered:\n");
+	printf("Integer: %d\n",i);
+	printf("Float: %.6f\n",f);
+	printf("Character: %c\n",c);
+	printf("Double: %.6lf\n",d);
+	
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+integer:·9	
+floating-point·number:·12.0254	
+character:·C	
+double:·12.02543124	
+You·entered:⏎	
+Integer:·9⏎	
+Float:·12.025400⏎	
+Character:·C⏎	
+Double:·12.025431	
+Test case 2
+integer:·-10	
+floating-point·number:·12.2546	
+character:·T	
+double:·12.6789678	
+You·entered:⏎	
+Integer:·-10⏎	
+Float:·12.254600⏎	
+Character:·T⏎	
+Double:·12.678968
+
+*/
