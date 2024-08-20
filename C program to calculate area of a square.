@@ -1,0 +1,22 @@
+//Write a C program to calculate the area of a square by taking the side of the square as an input.
+
+
+#include<stdio.h>
+void main()
+{ int a;
+	printf("Side: ") && scanf("%d",&a);
+	printf("Area of square: %d\n",a*a);
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Side:·7	
+Area·of·square:·49⏎	
+Test case 2
+Side:·6	
+Area·of·square:·36⏎
+
+*/
