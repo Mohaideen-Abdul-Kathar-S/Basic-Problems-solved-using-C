@@ -1,0 +1,23 @@
+//Write a program to find the quotient and remainder
+
+
+#include<stdio.h>
+void main (){ int a,b;
+	scanf("%d",&a) && scanf("%d",&b) && printf("%d\n%d\n",a/b,a%b);		 
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+1800	
+56	
+32⏎	
+8	
+Test case 2
+1250	
+150	
+8⏎	
+50
+
+*/
