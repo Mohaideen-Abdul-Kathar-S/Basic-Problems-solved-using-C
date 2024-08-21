@@ -1,0 +1,22 @@
+
+
+#include<stdio.h>
+	void main(){ float a,b;
+	scanf("%f",&a) && scanf("%f",&b);
+	printf("%lf\n%lf\n",a,b);			
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+78.963	
+559.632	
+78.962997⏎	
+559.632019⏎	
+Test case 2
+55.784	
+12.634	
+55.784000⏎	
+12.634000⏎
+*/
