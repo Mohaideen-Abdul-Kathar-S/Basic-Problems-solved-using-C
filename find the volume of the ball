@@ -1,0 +1,22 @@
+//Problem Description:
+
+//Laasya bought a new volleyball in the sports shop. It looks medium-sized. She somehow found the radius of the sphere. But she would like to know the volume of that ball.
+
+#include<stdio.h>
+void main(){ float r,b;
+	scanf("%f",&r);
+	b=(4.0/3.0)*3.14*r*r*r;
+	printf("%.6f\n",b);
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+4.6	
+407.513367	
+Test case 2
+3.7	
+212.067230
+
+*/
