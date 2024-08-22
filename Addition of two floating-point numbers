@@ -1,0 +1,19 @@
+//Addition of two floating-point numbers
+
+
+#include<stdio.h>
+void main(){ float a,b;
+	scanf("%f %f",&a,&b) && printf("%0.3f\n",a+b);
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+12563.459 2136.987546	
+14700.446	
+Test case 2
+22591.34897 2451.6354	
+25042.984
+
+*/
