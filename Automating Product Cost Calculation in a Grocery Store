@@ -1,0 +1,22 @@
+//Automating Product Cost Calculation in a Grocery Store
+
+
+#include<stdio.h>
+void main(){ float a;
+			int b;
+	scanf("%f %d",&a,&b);
+	printf("%.2f\n",a*b);
+}
+
+
+/*
+
+Sample Test Cases
+Test case 1
+78.00 4	
+312.00	
+Test case 2
+39.50 17	
+671.50
+
+*/
