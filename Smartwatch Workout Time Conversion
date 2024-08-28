@@ -1,0 +1,25 @@
+//Smartwatch Workout Time Conversion
+
+#include<stdio.h>
+void main(){ int a,i,b;
+	scanf("%d",&a);
+	for(b=0;3600<=a;b++)
+		a=a-3600;
+	for(i=0;60<=a;i++)
+		a=a-60;
+	printf("%dH:%dM:%dS\n",b,i,a);
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+7845	
+2H:10M:45S	
+Test case 2
+3546	
+0H:59M:6S
+
+*/
