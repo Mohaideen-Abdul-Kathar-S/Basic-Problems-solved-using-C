@@ -1,0 +1,35 @@
+//Automating Daily Salary Calculation for Audi Employees in HR Division
+
+
+#include<stdio.h>
+void main(){ int a;
+	float b;
+	scanf("%d\n%f",&a,&b) && printf("%0.2f\n",a*b);
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+7	
+2945.89	
+20621.23	
+Test case 2
+12	
+9546.25	
+114555.00	
+Test case 3
+19	
+4655.8	
+88460.20	
+Test case 4
+26	
+5462.8	
+142032.80	
+Test case 5
+41	
+25454.3	
+1043626.30
+
+*/
