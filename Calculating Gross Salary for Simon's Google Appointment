@@ -1,0 +1,40 @@
+//Calculating Gross Salary for Simon's Google Appointment
+
+
+#include<stdio.h>
+void main(){ int a,b,c;
+	scanf("%d\n%d\n%d",&a,&b,&c) && printf("%d\n",a+a*b/100+a*c/100);
+
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+75761	
+18	
+35	
+115913	
+Test case 2
+102548	
+24	
+16	
+143566	
+Test case 3
+81871	
+17	
+21	
+112981	
+Test case 4
+2354879	
+26	
+10	
+3202634	
+Test case 5
+8965545	
+24	
+68	
+17213845
+
+*/
