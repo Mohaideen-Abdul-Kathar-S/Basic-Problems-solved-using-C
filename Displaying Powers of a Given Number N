@@ -1,0 +1,29 @@
+//Displaying Powers of a Given Number N
+
+
+#include<stdio.h>
+void main(){ int a;
+	scanf("%d",&a) && printf("%d %d %d\n",a,a*a,a*a*a);
+}
+
+
+/*
+
+Sample Test Cases
+Test case 1
+137	
+137·18769·2571353	
+Test case 2
+568	
+568·322624·183250432	
+Test case 3
+98	
+98·9604·941192	
+Test case 4
+1025	
+1025·1050625·1076890625	
+Test case 5
+6525	
+6525·42575625·2147483647
+
+*/
