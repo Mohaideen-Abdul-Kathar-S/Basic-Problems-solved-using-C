@@ -1,0 +1,87 @@
+//Write a C Program to demonstrate the usage of unconditional control statements by printing the square of numbers upto n.
+
+
+
+#include <stdio.h>
+int main() {
+    int choice, num, i;
+ repit:
+    printf("Choose an option:\n");
+    printf("1.Print squares upto n\n");
+    printf("2.Exit\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    switch (choice) {
+		case 1:
+				printf("n: ") && scanf("%d",&num);
+				for(i=1;i<=num;i++)
+				{
+					printf("%d ",i*i);
+				}
+				printf("\n");
+				goto repit;
+				break;
+		case 2:
+				printf("Exited\n");
+				break;
+		default:
+				printf("Invalid choice\n");
+				goto repit;
+    }
+
+    return 0;
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Choose·an·option:⏎	
+1.Print·squares·upto·n⏎	
+2.Exit⏎	
+Enter·your·choice:·1	
+n:·9	
+1·4·9·16·25·36·49·64·81·⏎	
+Choose·an·option:⏎	
+1.Print·squares·upto·n⏎	
+2.Exit⏎	
+Enter·your·choice:·2	
+Exited⏎	
+Test case 2
+Choose·an·option:⏎	
+1.Print·squares·upto·n⏎	
+2.Exit⏎	
+Enter·your·choice:·15	
+Invalid·choice⏎	
+Choose·an·option:⏎	
+1.Print·squares·upto·n⏎	
+2.Exit⏎	
+Enter·your·choice:·1	
+n:·5	
+1·4·9·16·25·⏎	
+Choose·an·option:⏎	
+1.Print·squares·upto·n⏎	
+2.Exit⏎	
+Enter·your·choice:·2	
+Exited⏎	
+Test case 3
+Choose·an·option:⏎	
+1.Print·squares·upto·n⏎	
+2.Exit⏎	
+Enter·your·choice:·1	
+n:·1	
+1·⏎	
+Choose·an·option:⏎	
+1.Print·squares·upto·n⏎	
+2.Exit⏎	
+Enter·your·choice:·10	
+Invalid·choice⏎	
+Choose·an·option:⏎	
+1.Print·squares·upto·n⏎	
+2.Exit⏎	
+Enter·your·choice:·2	
+Exited⏎
+
+*/
