@@ -1,0 +1,31 @@
+//Write a C program to check whether a given input integer is in between two values x and y.
+
+
+#include<stdio.h>
+void main() { int a,b,c;
+	printf("lower bound(x): ") && scanf("%d",&a);
+	printf("upper bound(y): ") && scanf("%d",&b);
+	printf("number to check: ") && scanf("%d",&c);
+	if(a<=c && c<=b)
+	printf("%d is in between %d and %d\n",c,a,b);
+	else 
+	printf("%d is not in between %d and %d\n",c,a,b);
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+lower·bound(x):·8	
+upper·bound(y):·100	
+number·to·check:·16	
+16·is·in·between·8·and·100	
+Test case 2
+lower·bound(x):·1	
+upper·bound(y):·15	
+number·to·check:·30	
+30·is·not·in·between·1·and·15
+
+*/
