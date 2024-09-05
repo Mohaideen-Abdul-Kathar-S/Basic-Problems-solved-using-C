@@ -1,0 +1,92 @@
+//Write a program to convert years into seconds, minutes, hours, days and months using a switch statement
+
+
+#include<stdio.h>
+int main()
+{ int year,o;
+printf("Enter number of years:") && scanf ("%d",&year);
+printf("1.seconds\n2.minutes\n3.hours\n4.days\n5.months\n");
+printf("Select an option:") && scanf("%d",&o);
+switch(o){
+	case 1:
+		printf("Years to seconds:%d\n",365*24*60*60*year);
+		break;
+	case 2:
+		printf("Years to minutes:%d\n",365*24*60*year);
+		break;
+	case 3:
+		printf("Years to hours:%d\n",365*24*year);
+		break;
+	case 4:
+		printf("Years to days:%d\n",365*year);
+		break;
+	case 5:
+		printf("Years to months:%d\n",12*year);
+		break;
+	default:
+		printf("Invalid choice\n");
+}
+ return 0;
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·number·of·years:8	
+1.seconds⏎	
+2.minutes⏎	
+3.hours⏎	
+4.days⏎	
+5.months⏎	
+Select·an·option:1	
+Years·to·seconds:252288000⏎	
+Test case 2
+Enter·number·of·years:9	
+1.seconds⏎	
+2.minutes⏎	
+3.hours⏎	
+4.days⏎	
+5.months⏎	
+Select·an·option:2	
+Years·to·minutes:4730400⏎	
+Test case 3
+Enter·number·of·years:5	
+1.seconds⏎	
+2.minutes⏎	
+3.hours⏎	
+4.days⏎	
+5.months⏎	
+Select·an·option:7	
+Invalid·choice	
+Test case 4
+Enter·number·of·years:2	
+1.seconds⏎	
+2.minutes⏎	
+3.hours⏎	
+4.days⏎	
+5.months⏎	
+Select·an·option:3	
+Years·to·hours:17520⏎	
+Test case 5
+Enter·number·of·years:2	
+1.seconds⏎	
+2.minutes⏎	
+3.hours⏎	
+4.days⏎	
+5.months⏎	
+Select·an·option:6	
+Invalid·choice	
+Test case 6
+Enter·number·of·years:3	
+1.seconds⏎	
+2.minutes⏎	
+3.hours⏎	
+4.days⏎	
+5.months⏎	
+Select·an·option:4	
+Years·to·days:1095⏎
+
+*/
